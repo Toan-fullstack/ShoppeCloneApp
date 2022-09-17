@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import counterSlice from './pages/Auth/auth.slice'
+import authReducer from './pages/Auth/auth.slice'
 
 const reducer = combineReducers({
-  auth: counterSlice
+  auth: authReducer
 })
 
 const store = configureStore({
