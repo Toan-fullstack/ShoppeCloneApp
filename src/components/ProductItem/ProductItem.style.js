@@ -59,6 +59,42 @@ export const ProductItemPriceOriginal = styled.div`
   flex-shrink: 1;
   max-width: 50%;
   color: rgba(0, 0, 0, 0.54);
+  text-decoration: line-through;
+  margin-right: 5px;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
-export const ProductItemMeta = styled.div``
-export const ProductItemSold = styled.div``
+export const ProductItemPriceSale = styled.div`
+  flex-grow: 1;
+  color: #ee4d2d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  span {
+    &:first-child {
+      font-size: 1.2rem;
+      color: #ee4d2d;
+    }
+    &:last-child {
+      font-size: 1.6rem;
+      color: #ee4d2d;
+    }
+  }
+`
+export const ProductItemMeta = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+export const ProductItemSold = styled.div`
+  color: rgba(0, 0, 0, 0.87);
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  span:first-child {
+    margin-right: 3px;
+  }
+`

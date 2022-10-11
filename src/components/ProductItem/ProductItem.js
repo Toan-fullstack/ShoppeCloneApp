@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ProductRating from '../ProductRating/ProductRating'
-import * as S from './ProductItem.style'
+import * as S from './productItem.style'
 
 export default function ProductItem() {
   return (
@@ -21,7 +21,7 @@ export default function ProductItem() {
           </S.ProductItemTitle>
           <S.ProductItemPrice>
             <S.ProductItemPriceOriginal>đ 8.700</S.ProductItemPriceOriginal>
-            <S.ProductItemPriceOriginal>đ 8.700</S.ProductItemPriceOriginal>
+            <S.ProductItemPriceSale>đ 8.700</S.ProductItemPriceSale>
           </S.ProductItemPrice>
           <S.ProductItemMeta>
             <ProductRating />

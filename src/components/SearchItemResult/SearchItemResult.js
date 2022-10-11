@@ -1,5 +1,8 @@
 import React from 'react'
+import Pagination from '../Pagination/Pagination'
 import ProductItem from '../ProductItem/ProductItem'
+import { usePagination } from '@material-ui/lab'
+
 import * as S from './SearchItemResult.style'
 
 export default function SearchItemResult() {
@@ -59,6 +62,7 @@ export default function SearchItemResult() {
         <ProductItem />
         <ProductItem />
       </S.ProductList>
+      <Pagination />
     </div>
   )
 }
