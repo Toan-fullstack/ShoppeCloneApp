@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router'
+import { path } from 'src/constants/path'
 import usePopover from 'src/hooks/usePopover'
+import useQuery from 'src/hooks/useQuery'
 import Navbar from '../Navbar/Navbar'
 import Popover from '../popover/Popover'
 import * as S from './header.style'
 
 export default function Header() {
   const { activePopover, hidePopover, showPopover } = usePopover()
+  const [searchValue, setSearchValue] = useState('')
+  const navigate = useNavigate()
+  const query = useQuery()
+  useEffect(() => {
+    const { name = '' } = query
+    setSearchValue(name)
+  }, [query])
+  const onChangeSearch = event => {
+    setSearchValue(event.target.value)
+  }
+  const search = event => {
+    event.preventDefault()
+    navigate(path.home + `?name=${searchValue}`)
+  }
+
   return (
     <S.StyledHeader>
       <div className="container">
@@ -21,8 +39,12 @@ export default function Header() {
               </g>
             </svg>
           </S.Logo>
-          <S.StyledForm>
-            <S.StyledInput placeholder="Tìm kiếm sản phẩm" />
+          <S.StyledForm onSubmit={search}>
+            <S.StyledInput
+              placeholder="Tìm kiếm sản phẩm"
+              value={searchValue}
+              onChange={onChangeSearch}
+            />
             <S.StyledButton type="submit">
               <svg
                 height={19}

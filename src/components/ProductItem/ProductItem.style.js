@@ -36,6 +36,7 @@ export const ProductItemInfo = styled.div`
   padding: 0.5rem;
 `
 export const ProductItemTitle = styled.div`
+  color: rgba(0, 0, 0, 0.87);
   display: inline-block;
   display: -webkit-box;
   word-wrap: break-word;
@@ -50,6 +51,7 @@ export const ProductItemTitle = styled.div`
 export const ProductItemPrice = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   overflow: hidden;
   padding-top: 0.5rem;
   margin-bottom: 1rem;
@@ -58,30 +60,7 @@ export const ProductItemPrice = styled.div`
 export const ProductItemPriceOriginal = styled.div`
   flex-shrink: 1;
   max-width: 50%;
-  color: rgba(0, 0, 0, 0.54);
-  text-decoration: line-through;
-  margin-right: 5px;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`
-export const ProductItemPriceSale = styled.div`
-  flex-grow: 1;
   color: #ee4d2d;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  span {
-    &:first-child {
-      font-size: 1.2rem;
-      color: #ee4d2d;
-    }
-    &:last-child {
-      font-size: 1.6rem;
-      color: #ee4d2d;
-    }
-  }
 `
 export const ProductItemMeta = styled.div`
   display: flex;

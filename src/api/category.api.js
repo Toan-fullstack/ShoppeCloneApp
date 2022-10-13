@@ -1,4 +1,5 @@
 import http from 'src/utils/http'
+
 const URL = 'categories'
 
 const categoryApi = {

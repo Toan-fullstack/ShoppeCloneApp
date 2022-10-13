@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 export const Pagination = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: 3rem auto 4rem;
 `
-export const ButtonPaginate = styled.button`
+const ButtonPaginate = styled.button`
   color: rgba(0, 0, 0, 0.4);
   min-width: 4rem;
   height: 3rem;
